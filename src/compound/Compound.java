@@ -13,10 +13,6 @@ public class Compound {
     private Double empirical_mass;
     private Double experimental_mass;
 
-    public Compound() {
-        // this(["H"], [1]);
-    }
-
     public Compound(ArrayList<Element> elements, ArrayList<Double> compositions, int[] amounts) {
         this.elements = elements;
         this.compositions = compositions;
@@ -76,9 +72,9 @@ public class Compound {
         return this.experimental_mass;
     }
 
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello Java");
-        Compound c = new Compound();
+    // public static void main(String[] args) throws Exception {
+    // System.out.println("Hello Java");
+    // Compound c = new Compound();
 
-    }
+    // }
 }
