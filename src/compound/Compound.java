@@ -24,6 +24,8 @@ public class Compound {
         this.multiplicity = multiplicity;
         this.molecular_amounts = amounts;
         this.molecular_mass = 0.0;
+        this.empirical_mass = 0.0;
+        this.molecular_amounts = amounts.clone();
         for (int i = 0; i < this.molecular_amounts.length; i++) {
             this.molecular_amounts[i] *= this.multiplicity;
         }
@@ -50,6 +52,9 @@ public class Compound {
             smallestMole = Math.min(smallestMole, this.moles[i]);
         }
         for (int i = 0; i < this.elements.size(); i++) {
+            this.amounts[i] = Math.round((float) (this.moles[i] / smallestMole));
+        }
+        for (int i = 0; i < this.elements.size(); i++) {
             this.empirical_mass += this.amounts[i] * this.elements.get(i).getAtomicMass();
         }
     }
@@ -57,19 +62,14 @@ public class Compound {
     public Compound(ArrayList<Element> elements, int[] amounts) {
         this.elements = elements;
         this.amounts = amounts;
-        this.molecular_mass = 0.0;
+        this.empirical_mass = 0.0;
+        this.compositions = new ArrayList<Double>();
         for (int i = 0; i < this.elements.size(); i++) {
             this.empirical_mass += this.amounts[i] * this.elements.get(i).getAtomicMass();
         }
-        this.molecular_amounts = this.amounts;
-        for (int i = 0; i < this.molecular_amounts.length; i++) {
-            this.molecular_amounts[i] *= this.multiplicity;
-        }
         for (int i = 0; i < this.elements.size(); i++) {
-            this.molecular_mass += this.molecular_amounts[i] * this.elements.get(i).getAtomicMass();
-        }
-        for (int i = 0; i < this.elements.size(); i++) {
-            this.compositions.add((((this.amounts[i] * this.elements.get(i).getAtomicMass()) / this.empirical_mass)));
+            this.compositions
+                    .add(((this.amounts[i] * this.elements.get(i).getAtomicMass()) / this.empirical_mass) * 100);
         }
     }
 
@@ -77,7 +77,8 @@ public class Compound {
         this(elements, compositions);
         this.experimental_mass = experimental_mass;
         this.multiplicity = Math.round((float) (this.experimental_mass / this.empirical_mass));
-        this.molecular_amounts = this.amounts;
+        this.molecular_amounts = this.amounts.clone();
+        this.molecular_mass = 0.0;
         for (int i = 0; i < this.molecular_amounts.length; i++) {
             this.molecular_amounts[i] *= this.multiplicity;
             this.molecular_mass += this.molecular_amounts[i] * this.elements.get(i).getAtomicMass();
@@ -88,7 +89,8 @@ public class Compound {
         this(elements, amounts);
         this.experimental_mass = experimental_mass;
         this.multiplicity = Math.round((float) (this.experimental_mass / this.empirical_mass));
-        this.molecular_amounts = this.amounts;
+        this.molecular_amounts = this.amounts.clone();
+        this.molecular_mass = 0.0;
         for (int i = 0; i < this.molecular_amounts.length; i++) {
             this.molecular_amounts[i] *= this.multiplicity;
             this.molecular_mass += this.molecular_amounts[i] * this.elements.get(i).getAtomicMass();
@@ -144,6 +146,10 @@ public class Compound {
         return this.experimental_mass;
     }
 
+    public int getMultiplicity() {
+        return this.multiplicity;
+    }
+
     public String getMolecularFormula() {
         String out = "";
         for (int i = 0; i < this.elements.size(); i++) {
@@ -165,10 +171,9 @@ public class Compound {
      */
     @Override
     public String toString() {
-        String out = "";
-        for (int i = 0; i < this.elements.size(); i++) {
-            out += this.elements.get(i) + "" + this.amounts[i];
-        }
-        return out;
+        return "Empirical Formula: " + getEmpiricalFormula() + "\nMolecular Formula: " + getMolecularFormula()
+                + "\nMultiplicity: " + getMultiplicity() + "\nCompositions: " + getCompositions() + "\nEmpirical Mass: "
+                + getEmpiricalMass() + "\nMolecular Mass: " + getMolecularMass() + "\nExperimental Mass: "
+                + getExperimentalMass();
     }
 }
