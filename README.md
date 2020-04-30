@@ -8,7 +8,7 @@
 ## Usage
 
 ```sh
-java -jar bin/PercentCompChemCalc.jar
+java -jar PercentCompositionofCompoundsJava/bin/PercentCompChemCalc.jar
 ```
 
 ## Author
