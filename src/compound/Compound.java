@@ -29,9 +29,10 @@ public class Compound {
     public Compound(ArrayList<Element> elements, ArrayList<Double> compositions) {
         assert elements.size() == compositions.size() : "There needs to be the same number of Compositions as Elements";
 
-        this.amounts = new int[this.elements.size()];
         this.elements = elements;
         this.compositions = compositions;
+        this.amounts = new int[this.elements.size()];
+        this.empirical_mass = 0.0;
 
         for (int i = 0; i < this.elements.size(); i++) {
             this.amounts[i] = Math.round((float) (this.compositions.get(i) / this.elements.get(i).getAtomicMass()));

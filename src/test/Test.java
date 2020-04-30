@@ -20,6 +20,6 @@ public class Test {
         compositions.add(17.3);
         System.out.println(compositions);
         Compound nicotine = new Compound(elements, compositions);
-        // System.out.println(nicotine.getAmounts());
+        System.out.println(nicotine.getEmpiricalMass());
     }
 }
