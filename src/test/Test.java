@@ -6,6 +6,10 @@ import compound.Compound;
 import element.Element;
 
 public class Test {
+
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         ArrayList<Element> elements = new ArrayList<Element>(3);
         elements.add(Element.C);
