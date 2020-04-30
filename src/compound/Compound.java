@@ -16,6 +16,7 @@ public class Compound {
     private int multiplicity;
     private int[] molecular_amounts;
     private Double molecular_mass;
+    private String name;
 
     public Compound(ArrayList<Element> elements, ArrayList<Double> compositions, int[] amounts, int multiplicity) {
         this.elements = elements;
@@ -54,19 +55,23 @@ public class Compound {
         for (int i = 0; i < this.elements.size(); i++) {
             this.amounts[i] = Math.round((float) (this.moles[i] / smallestMole));
         }
+        this.molecular_amounts = this.amounts.clone();
         for (int i = 0; i < this.elements.size(); i++) {
             this.empirical_mass += this.amounts[i] * this.elements.get(i).getAtomicMass();
         }
+        this.molecular_mass = this.empirical_mass;
     }
 
     public Compound(ArrayList<Element> elements, int[] amounts) {
         this.elements = elements;
         this.amounts = amounts;
+        this.molecular_amounts = this.amounts.clone();
         this.empirical_mass = 0.0;
         this.compositions = new ArrayList<Double>();
         for (int i = 0; i < this.elements.size(); i++) {
             this.empirical_mass += this.amounts[i] * this.elements.get(i).getAtomicMass();
         }
+        this.molecular_mass = this.empirical_mass;
         for (int i = 0; i < this.elements.size(); i++) {
             this.compositions
                     .add(((this.amounts[i] * this.elements.get(i).getAtomicMass()) / this.empirical_mass) * 100);
@@ -77,6 +82,9 @@ public class Compound {
         this(elements, compositions);
         this.experimental_mass = experimental_mass;
         this.multiplicity = Math.round((float) (this.experimental_mass / this.empirical_mass));
+        if (this.multiplicity == 0) {
+            this.multiplicity = 1;
+        }
         this.molecular_amounts = this.amounts.clone();
         this.molecular_mass = 0.0;
         for (int i = 0; i < this.molecular_amounts.length; i++) {
@@ -89,12 +97,19 @@ public class Compound {
         this(elements, amounts);
         this.experimental_mass = experimental_mass;
         this.multiplicity = Math.round((float) (this.experimental_mass / this.empirical_mass));
+        if (this.multiplicity == 0) {
+            this.multiplicity = 1;
+        }
         this.molecular_amounts = this.amounts.clone();
         this.molecular_mass = 0.0;
         for (int i = 0; i < this.molecular_amounts.length; i++) {
             this.molecular_amounts[i] *= this.multiplicity;
             this.molecular_mass += this.molecular_amounts[i] * this.elements.get(i).getAtomicMass();
         }
+    }
+
+    public void addName(String name) {
+        this.name = name;
     }
 
     /**
@@ -150,10 +165,14 @@ public class Compound {
         return this.multiplicity;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
     public String getMolecularFormula() {
         String out = "";
         for (int i = 0; i < this.elements.size(); i++) {
-            out += this.elements.get(i) + "" + this.molecular_amounts[i];
+            out += this.elements.get(i).name() + "" + this.molecular_amounts[i];
         }
         return out;
     }
@@ -161,7 +180,7 @@ public class Compound {
     public String getEmpiricalFormula() {
         String out = "";
         for (int i = 0; i < this.elements.size(); i++) {
-            out += this.elements.get(i) + "" + this.amounts[i];
+            out += this.elements.get(i).name() + "" + this.amounts[i];
         }
         return out;
     }
@@ -171,9 +190,9 @@ public class Compound {
      */
     @Override
     public String toString() {
-        return "Empirical Formula: " + getEmpiricalFormula() + "\nMolecular Formula: " + getMolecularFormula()
-                + "\nMultiplicity: " + getMultiplicity() + "\nCompositions: " + getCompositions() + "\nEmpirical Mass: "
-                + getEmpiricalMass() + "\nMolecular Mass: " + getMolecularMass() + "\nExperimental Mass: "
-                + getExperimentalMass();
+        return "Name: " + getName() + "\nEmpirical Formula: " + getEmpiricalFormula() + "\nMolecular Formula: "
+                + getMolecularFormula() + "\nMultiplicity: " + getMultiplicity() + "\nCompositions: "
+                + getCompositions() + "\nEmpirical Mass: " + getEmpiricalMass() + "\nMolecular Mass: "
+                + getMolecularMass() + "\nExperimental Mass: " + getExperimentalMass();
     }
 }

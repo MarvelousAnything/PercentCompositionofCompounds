@@ -40,6 +40,7 @@ public enum Element {
 
     private static class Holder {
         static Map<Integer, Element> map = new HashMap<Integer, Element>();
+        static Map<String, Element> map2 = new HashMap<String, Element>();
     }
 
     private final int atomicNumber;
@@ -51,10 +52,15 @@ public enum Element {
         this.fullName = fullName;
         this.atomicMass = atomicMass;
         Holder.map.put(atomicNumber, this);
+        Holder.map2.put(fullName, this);
     }
 
     public static Element forAtomicNumber(int atomicNumber) {
         return Holder.map.get(atomicNumber);
+    }
+
+    public static Element forName(String name) {
+        return Holder.map2.get(name);
     }
 
     public int getAtomicNumber() {
@@ -67,5 +73,17 @@ public enum Element {
 
     public double getAtomicMass() {
         return atomicMass;
+    }
+
+    public static void printAllElements() {
+        for (int i = 0; i < Holder.map.size(); i++) {
+            System.out.println(Holder.map.get(i + 1));
+            System.out.println("");
+        }
+    }
+
+    public String toString() {
+        return "Name: " + getFullName() + "\nAtomic Number: " + getAtomicNumber() + "\nSymbol: " + this.name()
+                + "\nAtomic Mass: " + getAtomicMass();
     }
 }
