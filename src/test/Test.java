@@ -4,8 +4,14 @@ import java.util.ArrayList;
 
 import compound.Compound;
 import element.Element;
+import main.Main;
 
 public class Test {
+
+    public void testMain() {
+        String[] args = new String[0];
+        Main.main(args);
+    }
 
     /**
      * @param args
@@ -23,5 +29,6 @@ public class Test {
         int[] amounts = { 5, 7, 1 };
         Compound nicotine = new Compound(elements, compositions, 521.0);
         System.out.println(nicotine);
+
     }
 }

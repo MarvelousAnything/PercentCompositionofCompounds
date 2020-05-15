@@ -184,6 +184,7 @@ public class Main {
                             System.out.println("Invalid Choice");
                             break;
                     }
+                    break;
                 case 7:
                     Element.printAllElements();
                     pause();
