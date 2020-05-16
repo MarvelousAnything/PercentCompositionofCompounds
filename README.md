@@ -2,7 +2,9 @@
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
 </p>
-![Java CI with Maven](https://github.com/Thearchermancoding/PercentCompositionofCompoundsJava/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master)
+<p>
+  <img alt="Java CI with Maven" src="https://github.com/Thearchermancoding/PercentCompositionofCompoundsJava/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master" />
+</p>
 
 > Calculates the empirical formula from percent composition and vice versa
 
