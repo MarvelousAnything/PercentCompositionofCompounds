@@ -110,6 +110,9 @@
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
         <version>${jacoco-maven-plugin.version}</version>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
         <executions>
           <execution>
             <id>pre-unit-test</id>
