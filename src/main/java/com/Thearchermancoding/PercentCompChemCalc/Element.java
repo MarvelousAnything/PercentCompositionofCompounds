@@ -1,4 +1,4 @@
-package element;
+package com.Thearchermancoding.PercentCompChemCalc;
 
 import java.util.HashMap;
 import java.util.Map;

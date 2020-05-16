@@ -1,11 +1,11 @@
-package main;
+package com.Thearchermancoding.PercentCompChemCalc;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import compound.Compound;
-import element.Element;
+//import Compound;
+//import Element;
 
-public class Main {
+public class App {
     public static void pause() {
         try {
             System.in.read();

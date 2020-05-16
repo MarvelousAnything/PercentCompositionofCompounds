@@ -1,22 +1,18 @@
-package test;
+package com.Thearchermancoding.PercentCompChemCalc;
 
-import java.util.ArrayList;
+import org.junit.jupiter.api.Test;
 
-import compound.Compound;
-import element.Element;
-import main.Main;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Test {
-
-    public void testMain() {
-        String[] args = new String[0];
-        Main.main(args);
-    }
-
+/**
+ * Unit test for simple App.
+ */
+class AppTest {
     /**
-     * @param args
+     * Rigorous Test.
      */
-    public static void main(String[] args) {
+    @Test
+    void testApp() {
         ArrayList<Element> elements = new ArrayList<Element>(3);
         elements.add(Element.C);
         elements.add(Element.H);
@@ -29,6 +25,5 @@ public class Test {
         int[] amounts = { 5, 7, 1 };
         Compound nicotine = new Compound(elements, compositions, 521.0);
         System.out.println(nicotine);
-
     }
 }
