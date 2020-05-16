@@ -1,9 +1,9 @@
 package com.thearchermancoding.chemcalc;
 
 import java.io.IOException;
-//import java.util.ArrayList;
 import java.util.Scanner;
 
+//import java.util.ArrayList;
 /**
  * The main loop that runs the cli so the user can actually use the app.
  */
