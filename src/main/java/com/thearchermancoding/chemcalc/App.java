@@ -1,18 +1,31 @@
-package com.Thearchermancoding.PercentCompChemCalc;
+package com.thearchermancoding.chemcalc;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
-//import Compound;
-//import Element;
 
-public class App {
-    public static void pause() {
+/**
+ * The main loop that runs the cli so the user can actually use the app.
+ */
+public final class App {
+
+    private App() {
+        // Not called.
+    }
+
+    /**
+     * Pauses until next input.
+     */
+    static void pause() {
         try {
             System.in.read();
-        } catch (Exception e) {
+        } catch (IOException e) {
         }
     }
 
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
@@ -25,7 +38,7 @@ public class App {
             int multiplicity;
             int[] amounts;
             Compound compound;
-            Double experimental_mass;
+            Double experimentalMass;
 
             System.out.println(menuString);
             System.out.print("Choice: ");
@@ -126,9 +139,9 @@ public class App {
                         compositions.add(composition);
                     }
                     System.out.print("What is the experimental mass of this compound? ");
-                    experimental_mass = scan.nextDouble();
+                    experimentalMass = scan.nextDouble();
                     scan.nextLine();
-                    compound = new Compound(elements, compositions, experimental_mass);
+                    compound = new Compound(elements, compositions, experimentalMass);
                     System.out.print("What is this compounds name? ");
                     compound.addName(scan.nextLine());
                     System.out.println(compound);
@@ -152,9 +165,9 @@ public class App {
                         amounts[i] = amount;
                     }
                     System.out.print("What is the experimental mass of this compound? ");
-                    experimental_mass = scan.nextDouble();
+                    experimentalMass = scan.nextDouble();
                     scan.nextLine();
-                    compound = new Compound(elements, amounts, experimental_mass);
+                    compound = new Compound(elements, amounts, experimentalMass);
                     System.out.print("What is this compounds name? ");
                     compound.addName(scan.nextLine());
                     System.out.println(compound);

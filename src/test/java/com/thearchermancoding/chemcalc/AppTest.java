@@ -1,20 +1,17 @@
-package com.Thearchermancoding.PercentCompChemCalc;
-
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+package com.thearchermancoding.chemcalc;
 
 import java.util.ArrayList;
+import org.junit.jupiter.api.Test;
 
 /**
  * Unit test for simple App.
  */
-class AppTest {
+public class AppTest {
     /**
      * Rigorous Test.
      */
     @Test
-    void testApp() {
+    void testCompound() {
         ArrayList<Element> elements = new ArrayList<Element>(3);
         elements.add(Element.C);
         elements.add(Element.H);
@@ -27,5 +24,12 @@ class AppTest {
         int[] amounts = { 5, 7, 1 };
         Compound nicotine = new Compound(elements, compositions, 521.0);
         System.out.println(nicotine);
+    }
+
+    @Test
+
+    void testMain() {
+        String[] args = { "" };
+        App.main(args);
     }
 }
