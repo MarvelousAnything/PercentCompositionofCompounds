@@ -4,7 +4,7 @@
   <img alt="Java CI with Maven" src="https://github.com/Thearchermancoding/PercentCompositionofCompoundsJava/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master" />
 </p>
 
-> Calculates the empirical formula from percent composition and vice versa
+> A program I made for my Chemistry class to figure out compounds from their percent composition.
 
 ## Usage
 
