@@ -21,7 +21,7 @@ public class AppTest {
         compositions.add(74.0);
         compositions.add(8.7);
         compositions.add(17.3);
-        int[] amounts = { 5, 7, 1 };
+        int[] amounts = {5, 7, 1};
         Compound nicotine = new Compound(elements, compositions, 521.0);
         System.out.println(nicotine);
     }
@@ -29,7 +29,7 @@ public class AppTest {
     @Test
 
     void testMain() {
-        String[] args = { "" };
+        String[] args = {""};
         App.main(args);
     }
 }

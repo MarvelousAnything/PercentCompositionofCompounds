@@ -320,10 +320,13 @@ public enum Element {
             System.out.println("");
         }
     }
-
-    @Override
-    public String toString() {
-        return "Name: " + getFullName() + "\nAtomic Number: " + getAtomicNumber() + "\nSymbol: " + this.name()
-                + "\nAtomic Mass: " + getAtomicMass();
+    
+    public String getInfo() {
+    	return "Name: " + getFullName() + "\nAtomic Number: " + getAtomicNumber() + "\nSymbol: " + this.name() + "\nAtomic Mass: " + getAtomicMass();
     }
+//    @Override
+//    public String toString() {
+//        return "Name: " + getFullName() + "\nAtomic Number: " + getAtomicNumber() + "\nSymbol: " + this.name()
+//                + "\nAtomic Mass: " + getAtomicMass();
+//    }
 }
