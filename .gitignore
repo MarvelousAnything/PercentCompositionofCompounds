@@ -27,15 +27,15 @@ buildNumber.properties
 .project
 .vscode/
 
-*.DS_STORE
 .DS_STORE
-*/*/*.DS_STORE
+*/.DS_STORE
+*/*/.DS_STORE
+*/*/*/.DS_STORE
 src/.DS_Store
 src/main/.DS_Store
 src/main/java/.DS_Store
 src/main/java/com/.DS_Store
 src/main/java/com/Thearchermancoding/.DS_Store
-.DS_Store
 
 .classpath
 .checkstyle
