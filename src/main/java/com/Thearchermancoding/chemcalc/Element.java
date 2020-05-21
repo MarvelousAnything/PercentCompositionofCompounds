@@ -272,7 +272,7 @@ public enum Element {
     /**
      *
      * @param atomicNumber
-     * @return
+     * @return Element
      */
     public static Element forAtomicNumber(int atomicNumber) {
         return Holder.map.get(atomicNumber);
@@ -281,7 +281,7 @@ public enum Element {
     /**
      *
      * @param name
-     * @return
+     * @return Element
      */
     public static Element forName(String name) {
         return Holder.map2.get(name);
@@ -289,7 +289,7 @@ public enum Element {
 
     /**
      *
-     * @return
+     * @return int
      */
     public int getAtomicNumber() {
         return atomicNumber;
@@ -297,7 +297,7 @@ public enum Element {
 
     /**
      *
-     * @return
+     * @return String
      */
     public String getFullName() {
         return fullName;
@@ -305,7 +305,7 @@ public enum Element {
 
     /**
      *
-     * @return
+     * @return double
      */
     public double getAtomicMass() {
         return atomicMass;
@@ -320,13 +320,15 @@ public enum Element {
             System.out.println("");
         }
     }
-    
+
+    /**
+     *
+     * @return String
+     */
     public String getInfo() {
-    	return "Name: " + getFullName() + "\nAtomic Number: " + getAtomicNumber() + "\nSymbol: " + this.name() + "\nAtomic Mass: " + getAtomicMass();
+        return "Name: " + getFullName()
+            + "\nAtomic Number: " + getAtomicNumber()
+            + "\nSymbol: " + this.name()
+            + "\nAtomic Mass: " + getAtomicMass();
     }
-//    @Override
-//    public String toString() {
-//        return "Name: " + getFullName() + "\nAtomic Number: " + getAtomicNumber() + "\nSymbol: " + this.name()
-//                + "\nAtomic Mass: " + getAtomicMass();
-//    }
 }

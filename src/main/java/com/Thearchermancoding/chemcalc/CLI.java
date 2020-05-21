@@ -7,9 +7,9 @@ import java.util.Scanner;
 /**
  * The main loop that runs the cli so the user can actually use the app.
  */
-public final class App {
+public final class CLI {
 
-    private App() {
+    private CLI() {
         // Not called.
     }
 
