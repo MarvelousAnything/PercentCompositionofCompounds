@@ -3,8 +3,8 @@
 <suppressions>
   <suppress files="$" checks="MagicNumber" />
   <suppress files="Test.java$" checks="NoWhitespaceAfter" />
-  <suppress files="App.java$" checks="MethodLength" />
-  <suppress files="App.java$" checks="LineLength" />
+  <suppress files="CLI.java$" checks="MethodLength" />
+  <suppress files="CLI.java$" checks="LineLength" />
   <suppress files="$" checks="HiddenField" />
   <suppress files="$" checks="PackageDeclaration" />
   <suppress files="$" checks="check-unit-test" />
