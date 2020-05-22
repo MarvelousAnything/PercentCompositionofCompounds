@@ -1,0 +1,28 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Thearchermancoding",
+      "name": "Owen Hayes",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/20994684?v=4",
+      "profile": "https://github.com/Thearchermancoding",
+      "contributions": [
+        "code",
+        "design",
+        "ideas",
+        "maintenance",
+        "projectManagement"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "PercentCompositionofCompounds",
+  "projectOwner": "Thearchermancoding",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
