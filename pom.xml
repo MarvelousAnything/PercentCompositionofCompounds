@@ -39,12 +39,24 @@
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
-      <version>11</version>
+      <version>15-ea+5</version>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-fxml</artifactId>
-      <version>11</version>
+      <version>15-ea+5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-maven-plugin</artifactId>
+      <version>0.0.4</version>
+      <type>maven-plugin</type>
+    </dependency>
+    <dependency>
+      <groupId>org.eluder.coveralls</groupId>
+      <artifactId>coveralls-maven-plugin</artifactId>
+      <version>4.3.0</version>
+      <type>maven-plugin</type>
     </dependency>
   </dependencies>
   <build>
@@ -100,6 +112,7 @@
           <configLocation>com/github/ngeor/checkstyle.xml</configLocation>
           <includeTestSourceDirectory>true</includeTestSourceDirectory>
           <skip>${skipTests}</skip>
+          <excludes>**/module-info.java</excludes>
         </configuration>
         <executions>
           <execution>
@@ -195,6 +208,21 @@
                 <target>9</target>
             </configuration>
         </plugin>
+      <plugin>
+        <!-- Build an executable JAR -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.5</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>lib/</classpathPrefix>
+              <mainClass>com.thearchermancoding.chemcalc.App</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
   <reporting>
@@ -205,6 +233,14 @@
         <version>${maven-javadoc-plugin.version}</version>
         <configuration>
           <doclint>none</doclint>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-maven-plugin</artifactId>
+        <version>0.0.4</version>
+        <configuration>
+          <mainClass>com.thearchermancoding.chemcalc.App</mainClass>
         </configuration>
       </plugin>
     </plugins>
@@ -236,7 +272,7 @@
           <plugin>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-maven-plugin</artifactId>
-            <version>0.0.1</version>
+            <version>0.0.4</version>
             <configuration>
               <mainClass>com.thearchermancoding.chemcalc.App</mainClass>
             </configuration>
