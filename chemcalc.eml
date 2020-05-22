@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component LANGUAGE_LEVEL="JDK_1_9" inheritJdk="true">
+<component LANGUAGE_LEVEL="JDK_11" inheritJdk="true">
 	<output-test url="file://$MODULE_DIR$/target/test-classes"/>
 	<contentEntry url="file://$MODULE_DIR$">
 		<testFolder url="file://$MODULE_DIR$/src/test/java"/>
@@ -16,6 +16,8 @@
 	<lib name="Maven: org.tukaani:xz:1.8" scope="RUNTIME"/>
 	<levels>
 		<level name="Maven: org.junit.jupiter:junit-jupiter-api:5.6.0" value="project"/>
+		<level name="Maven: org.apiguardian:apiguardian-api:1.1.0" value="project"/>
+		<level name="Maven: org.opentest4j:opentest4j:1.2.0" value="project"/>
 		<level name="Maven: org.junit.platform:junit-platform-commons:1.6.0" value="project"/>
 		<level name="Maven: org.junit.jupiter:junit-jupiter-engine:5.6.0" value="project"/>
 		<level name="Maven: org.junit.platform:junit-platform-engine:1.6.0" value="project"/>
@@ -87,7 +89,5 @@
 		<level name="Maven: org.codehaus.plexus:plexus-utils:2.0.7" value="project"/>
 		<level name="Maven: org.slf4j:slf4j-api:1.7.21" value="project"/>
 		<level name="Maven: org.slf4j:jcl-over-slf4j:1.7.21" value="project"/>
-		<level name="Maven: org.apiguardian:apiguardian-api:1.1.0" value="project"/>
-		<level name="Maven: org.opentest4j:opentest4j:1.2.0" value="project"/>
 	</levels>
 </component>
