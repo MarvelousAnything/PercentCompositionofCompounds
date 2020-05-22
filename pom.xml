@@ -223,6 +223,14 @@
           </archive>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-maven-plugin</artifactId>
+        <version>0.0.4</version>
+        <configuration>
+          <mainClass>com.thearchermancoding.chemcalc.App</mainClass>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
   <reporting>
@@ -233,14 +241,6 @@
         <version>${maven-javadoc-plugin.version}</version>
         <configuration>
           <doclint>none</doclint>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.openjfx</groupId>
-        <artifactId>javafx-maven-plugin</artifactId>
-        <version>0.0.4</version>
-        <configuration>
-          <mainClass>com.thearchermancoding.chemcalc.App</mainClass>
         </configuration>
       </plugin>
     </plugins>
