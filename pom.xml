@@ -17,8 +17,8 @@
     <maven-javadoc-plugin.version>3.2.0</maven-javadoc-plugin.version>
     <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
     <!-- JaCoCo thresholds. Increase gradually as you add tests. -->
-    <jacoco.unit-tests.limit.instruction-ratio>0%</jacoco.unit-tests.limit.instruction-ratio>
-    <jacoco.unit-tests.limit.branch-ratio>0%</jacoco.unit-tests.limit.branch-ratio>
+    <jacoco.unit-tests.limit.instruction-ratio>80%</jacoco.unit-tests.limit.instruction-ratio>
+    <jacoco.unit-tests.limit.branch-ratio>80%</jacoco.unit-tests.limit.branch-ratio>
     <jacoco.unit-tests.limit.class-complexity>20</jacoco.unit-tests.limit.class-complexity>
     <jacoco.unit-tests.limit.method-complexity>5</jacoco.unit-tests.limit.method-complexity>
     <doclint>none</doclint>
@@ -134,7 +134,7 @@
         <artifactId>jacoco-maven-plugin</artifactId>
         <version>${jacoco-maven-plugin.version}</version>
         <configuration>
-          <skip>true</skip>
+          <skip>false</skip>
         </configuration>
         <executions>
           <execution>
@@ -149,6 +149,9 @@
             <goals>
               <goal>report</goal>
             </goals>
+            <configuration>
+              <outputDirectory>target/jacoco-report</outputDirectory>
+            </configuration>
           </execution>
           <execution>
             <id>check-unit-test</id>
@@ -204,8 +207,8 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.1</version>
             <configuration>
-                <source>${java.version}</source>
-                <target>${java.version}</target>
+                <source>14</source>
+                <target>14</target>
             </configuration>
         </plugin>
       <plugin>
@@ -241,6 +244,9 @@
         <version>${maven-javadoc-plugin.version}</version>
         <configuration>
           <doclint>none</doclint>
+          <additionalOptions>-public</additionalOptions>
+          <additionalOptions>-protected</additionalOptions>
+          <additionalOptions>-private</additionalOptions>
         </configuration>
       </plugin>
     </plugins>
