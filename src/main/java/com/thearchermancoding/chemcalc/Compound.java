@@ -9,12 +9,11 @@ import java.util.ArrayList;
  */
 public class Compound {
 
-    private ArrayList<Element> elements;
-    private ArrayList<Double> compositions;
-    private int[] amounts;
+    private final ArrayList<Element> elements;
+    private final ArrayList<Double> compositions;
+    private final int[] amounts;
     private Double empiricalMass;
     private Double experimentalMass;
-    private Double[] moles;
     private int multiplicity;
     private int[] molecularAmounts;
     private Double molecularMass;
@@ -59,15 +58,15 @@ public class Compound {
         this.compositions = compositions;
         this.amounts = new int[this.elements.size()];
         this.empiricalMass = 0.0;
-        this.moles = new Double[this.elements.size()];
+        Double[] moles = new Double[this.elements.size()];
 
         Double smallestMole = Double.MAX_VALUE;
         for (int i = 0; i < this.elements.size(); i++) {
-            this.moles[i] = this.compositions.get(i) / this.elements.get(i).getAtomicMass();
-            smallestMole = Math.min(smallestMole, this.moles[i]);
+            moles[i] = this.compositions.get(i) / this.elements.get(i).getAtomicMass();
+            smallestMole = Math.min(smallestMole, moles[i]);
         }
         for (int i = 0; i < this.elements.size(); i++) {
-            this.amounts[i] = Math.round((float) (this.moles[i] / smallestMole));
+            this.amounts[i] = Math.round((float) (moles[i] / smallestMole));
         }
         this.molecularAmounts = this.amounts.clone();
         for (int i = 0; i < this.elements.size(); i++) {
