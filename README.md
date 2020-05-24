@@ -1,10 +1,8 @@
 <h1 align="center">Welcome to PercentCompChemCalc 👋</h1>
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <img alt="Java CI with Maven" src="https://github.com/Thearchermancoding/PercentCompositionofCompoundsJava/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master" />
+  <img alt="All Contributors" src="https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square"\>
 </p>
 
 > Calculates the empirical formula from percent composition and vice versa
