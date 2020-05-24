@@ -9,6 +9,8 @@
 
 ## Usage
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ec4a295fffd14096a19aeb663ef1cd8e)](https://app.codacy.com/manual/Thearchermancoding/PercentCompositionofCompounds?utm_source=github.com&utm_medium=referral&utm_content=Thearchermancoding/PercentCompositionofCompounds&utm_campaign=Badge_Grade_Dashboard)
+
 ```sh
 java -jar PercentCompositionofCompoundsJava/bin/PercentCompChemCalc.jar
 ```
