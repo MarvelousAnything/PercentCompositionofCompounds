@@ -1,15 +1,14 @@
-<h1 align="center">Welcome to PercentCompChemCalc 👋</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <img alt="Java CI with Maven" src="https://github.com/Thearchermancoding/PercentCompositionofCompoundsJava/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master" />
-  <img alt="All Contributors" src="https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square"\>
-</p>
 
+# Welcome to PercentCompChemCalc 👋
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
+![Java CI with Maven](https://github.com/Thearchermancoding/PercentCompositionofCompoundsJava/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master)
+![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ec4a295fffd14096a19aeb663ef1cd8e)](https://app.codacy.com/manual/Thearchermancoding/PercentCompositionofCompounds?utm_source=github.com&utm_medium=referral&utm_content=Thearchermancoding/PercentCompositionofCompounds&utm_campaign=Badge_Grade_Dashboard)
 > Calculates the empirical formula from percent composition and vice versa
 
 ## Usage
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ec4a295fffd14096a19aeb663ef1cd8e)](https://app.codacy.com/manual/Thearchermancoding/PercentCompositionofCompounds?utm_source=github.com&utm_medium=referral&utm_content=Thearchermancoding/PercentCompositionofCompounds&utm_campaign=Badge_Grade_Dashboard)
+
 
 ```sh
 java -jar PercentCompositionofCompoundsJava/bin/PercentCompChemCalc.jar
