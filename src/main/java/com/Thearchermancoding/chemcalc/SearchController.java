@@ -1,7 +1,7 @@
 package com.thearchermancoding.chemcalc;
 
 /**
- * The type Controller.
+ * The type SearchController.
  */
-public class Controller {
+public class SearchController {
 }
