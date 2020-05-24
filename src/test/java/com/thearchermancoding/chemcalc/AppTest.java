@@ -27,7 +27,6 @@ public class AppTest {
     }
 
     @Test
-
     void testMain() {
         String[] args = { "" };
         App.main(args);
