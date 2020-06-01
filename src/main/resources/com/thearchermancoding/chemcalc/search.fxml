@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.thearchermancoding.chemcalc.SearchController">
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Thearchermancoding.chemcalc.GUIControllers.SearchController">
   <children>
     <Label text="Search" />
     <Button fx:id="Search" text="Search" />
