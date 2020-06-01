@@ -1,4 +1,4 @@
-package com.Thearchermancoding.chemcalc.GUIControllers;
+package com.Thearchermancoding.chemcalc.controllers;
 
 /**
  * The type Menu controller.
