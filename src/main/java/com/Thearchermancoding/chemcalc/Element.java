@@ -1,4 +1,4 @@
-package com.thearchermancoding.chemcalc.chemistry;
+package com.thearchermancoding.chemcalc;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.Thearchermancoding.chemcalc.controllers;
+package com.thearchermancoding.chemcalc;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
