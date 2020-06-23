@@ -1,5 +1,6 @@
 
 # Welcome to PercentCompChemCalc 👋
+[![HitCount](http://hits.dwyl.com/ThearchermanCoding/PercentCompositionofCompounds.svg)](http://hits.dwyl.com/ThearchermanCoding/PercentCompositionofCompounds)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
 ![Java CI with Maven](https://github.com/Thearchermancoding/PercentCompositionofCompoundsJava/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master)
 ![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)
