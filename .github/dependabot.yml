@@ -1,0 +1,38 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  target-branch: master
+  ignore:
+  - dependency-name: com.puppycrawl.tools:checkstyle
+    versions:
+    - "8.40"
+    - "8.41"
+    - 8.41.1
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  target-branch: feature/gui
+  ignore:
+  - dependency-name: com.puppycrawl.tools:checkstyle
+    versions:
+    - "8.40"
+    - "8.41"
+    - 8.41.1
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  target-branch: develop
+  ignore:
+  - dependency-name: com.puppycrawl.tools:checkstyle
+    versions:
+    - "8.40"
+    - "8.41"
+    - 8.41.1
